@@ -41,7 +41,7 @@ runtime {
         else if (currentOs.linux) {
             installerOptions += ['--linux-package-name', 'hellofx', '--linux-shortcut']
         }
-        else if (currentOs.macOsx) {
+        else if (currentOs.macOsX) {
             installerOptions += ['--mac-package-name', 'hellofx']
         }
     }
