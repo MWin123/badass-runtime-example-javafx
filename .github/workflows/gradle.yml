@@ -20,11 +20,10 @@ jobs:
         distribution: 'zulu'
         java-version: ${{ matrix.java }}
         java-package: jdk+fx
-        cache: 'gradle'
     - name: Echo JAVA_HOME
       run: echo $JAVA_HOME
     - name: Verify Gradle Wrapper
-      uses: gradle/wrapper-validation-action@v1
+      uses: gradle/actions/wrapper-validation@v4
     - name: Execute build
       run: ./gradlew --info --stacktrace build
     - name: Execute runtime
