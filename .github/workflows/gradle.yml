@@ -24,11 +24,6 @@ jobs:
       run: echo $JAVA_HOME
     - name: Verify Gradle Wrapper
       uses: gradle/actions/wrapper-validation@v4
-    - name: Cache Gradle dependencies
-      uses: burrunan/gradle-cache-action@v3
-      with:
-        job-id: jdk${{ matrix.java }}-${{ matrix.os }}
-        gradle-version: wrapper
     - name: Execute build
       run: ./gradlew --info --stacktrace build
     - name: Execute runtime
